@@ -1,0 +1,323 @@
+
+$select=  " SELECT products.name proname , sections.name secname FROM products JOIN sections ON products.sectionID = sections.ID";
+$s= mysqli_query($conn, $select);
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="index.php">BOOK</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.php">Feedback<span class="sr-only">(current)</span></a>
+      </li>
+    
+      <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.php">Login<span class="sr-only">(current)</span></a>
+      </li>
+    
+    </ul>
+
+  </div>
+</nav>
+
+
+
+
+   <a class="dropdown-item" href="/ecommerce/employees/emplist.php">رومانسي</a>
+          <a class="dropdown-item" href="/ecommerce/employees/addemp.php">رعب</a>
+          <a class="dropdown-item" href="/ecommerce/employees/addemp.php">خيال</a>
+          <a class="dropdown-item" href="/ecommerce/employees/addemp.php">غموض و تشويق</a>
+          <a class="dropdown-item" href="/ecommerce/employees/addemp.php">فلسفة</a>
+          <a class="dropdown-item" href="/ecommerce/employees/addemp.php">مجلات أطفال</a>
+          <a class="dropdown-item" href="/ecommerce/employees/addemp.php">اجتماعية</a>
+
+
+
+
+
+          $update1 = "UPDATE `products` SET name ='$name' price= $price , author = '$author' , sectionID = $sectionID , companyID = $companyID   WHERE id = $id";
+        $i= mysqli_query($conn , $update1);
+
+
+
+
+
+
+          <? $title= 'Web Develop'; 
+
+ $quariy = $mysqli->query("select * from products where ID ='2'");
+  $data = mysqli_fetch_array($quariy);
+
+?>
+<main class="py-4 container">
+     <div class ="row">
+         <div class="col-md-4">
+            <div class="card">
+                <h4 class="card-header">
+                    <a href="show.php" class="btn btn-primary">Go 
+                    somewhere</a>
+                </h4>
+                    <div class="card-body"><?php echo $data['name']?>
+                    </div>
+                   <div class="card-footer"><?php echo 
+                    $data['more_information']?></div>
+                </div>
+            </div>
+         </div>
+    </main>
+
+
+
+
+    <p class="p" class="card-text"> 
+                 <?php echo 
+                    $data['price']?></div>
+             </p>
+             
+
+
+
+
+                  <div class="col">
+          <div class="card text-white bg-secondary mb-3 mt-3 " style="width: 18rem;">
+            <img src="ard zekola.jpg" class="card-img-top" alt="book" width="200" height="198">
+            <div class="card-body">
+            <?php 
+                $select= "SELECT * FROM `products` WHERE ID='4'";
+                $s= mysqli_query($conn, $select);
+                $data = mysqli_fetch_array($s);
+                ?>
+              <h5 class="h5" class="card-title"><?php echo $data['name']?></h5>
+             
+                   <div class="card-footer"><?php echo 
+                    $data['price']?>
+                </div>
+                <div class="card-footer"><?php echo 
+                    $data['author']?></div>
+                
+                <?php 
+                $select1= "SELECT * FROM `sections` WHERE ID='3'";
+                $s1= mysqli_query($conn, $select1);
+                $data1 = mysqli_fetch_array($s1);
+                ?>
+                  <div class="card-footer"><?php echo 
+                    $data1['name']?></div>
+                   
+                <?php 
+                $select2= "SELECT * FROM `partnershipCompany` WHERE ID='3'";
+                $s2= mysqli_query($conn, $select2);
+                $data2 = mysqli_fetch_array($s2);
+                ?>
+                  <div class="card-footer"><?php echo 
+                    $data2['name']?></div>
+                
+              <a href="#" class="btn btn-light">buy</a>
+            </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="row">
+      <div class="col">
+        <div class="card text-white bg-secondary mb-3 mt-3 " style="width: 18rem;">
+            <img src="nsf meet.jpg" class="card-img-top" alt="book" width="200" height="196">
+            <div class="card-body">
+            <?php
+                $select = "SELECT * FROM `products` WHERE ID='3'";
+                $s = mysqli_query($conn, $select);
+                $data = mysqli_fetch_array($s);
+                ?>
+
+                <h5 class="h5" class="card-title"><?php echo $data['name'] ?></h5>
+                <p class="p" class="card-text">
+                <div class="card-footer"><?php echo
+                                                $data['price'] ?>
+                </div>
+                <div class="card-footer"><?php echo
+                                                $data['author'] ?></div>
+
+
+ <?php 
+                $select1= "SELECT * FROM `sections` WHERE ID='2'";
+                $s1= mysqli_query($conn, $select1);
+                $data1 = mysqli_fetch_array($s1);
+                ?>
+                  <div class="card-footer"><?php echo 
+                    $data1['name']?></div>
+                    
+                    <?php 
+                $select2= "SELECT * FROM `partnershipCompany` WHERE ID='7'";
+                $s2= mysqli_query($conn, $select2);
+                $data2 = mysqli_fetch_array($s2);
+                ?>
+                  <div class="card-footer"><?php echo 
+                    $data2['name']?></div>
+                    </p> </p>
+              <a href="#" class="btn btn-light"> buy </a>
+            </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+      if(isset($_POST['login']))
+{
+  $name= $_POST['name'];
+  $password = $_POST['password'];
+
+  $select="SELECT * FROM `admins` WHERE name = '$name' and password = '$password' ";
+
+  $s= mysqli_query($conn, $select);
+    $row=mysqli_num_rows($s);
+    if($row > 0){
+    header("location: /ecommerce/employees/emplist.php");
+    } else {
+        echo "Not Admin";
+    }
+     
+
+}
+
+
+
+
+if($_SESSION['admins']){
+
+} else{
+    header("location:/ecommerce/shared Admin/login.php");
+}
+
+
+
+
+
+
+
+<button type="submit" class="btn btn-info" name= "login" >Login</button>
+
+
+  </div>
+  <input type="radio" name="cash" id="cash">
+   <label for="cash">Cash</label>
+   
+<br>
+<input type="radio" name="visa" id="visa"> 
+<label for="visa">Visa</label>
+<br>
+
+
+href="/ecommerce/shared Admin/login.php"
+
+
+
+//edit part
+
+
+$name="";
+$phone="";
+$email="";
+$address="";
+$update= false;
+
+if(isset($_GET['edit']))
+{
+  $update = true;
+  $id = $_GET['edit'];
+  $select ="SELECT * FROM `customers` WHERE id = $id";
+  $s =mysqli_query($conn,$select);
+  $row = mysqli_fetch_assoc($s);
+  $name = $row ['name'];
+  $email = $row ['email'];
+$phone = $row ['phone'];
+ $address = $row ['address'];
+
+}
+if(isset($_POST['update']))
+{
+  $name= $_POST['name'];
+  $phone= $_POST['phone'];
+  $email = $_POST['email'];
+  $address = $_POST ['address'];
+  
+
+ 
+$update1 = "UPDATE`customers` SET name ='$name' , phone =$phone , email='$email' , address='$address' WHERE id = $id";
+        $i= mysqli_query($conn , $update1);
+        
+}
+
+
+
+a href="/ecommerce/customers/profile.php?custID<?php echo $CustomerData['ID']?>" class="btn btn-outline-info ">Profile</a>
+
+
+
+
+
+
+$CustomerData = mysqli_fetch_assoc($ExecuteQuery1);
+$CustomerEmail = $CustomerData['email'];
+$CustomerName = $CustomerData['name'];
+$CustomerPhone= $CustomerData['phone'];
+$CustomerAddress = $CustomerData['address'];
+$CustomerPassword = $CustomerData['password'];
+
+
+
+
+#f6f5f5
+
+
+  <form action="../products/prolist.php" class="d-flex" method="GET">
+<input class="form-control me-2" id="search" type="text" placeholder="Type here" name="search">
+<input id="submit" class="btn btn-outline-success" type="submit" value="Search" >
+<?php
+
+
+
+$search = $_GET['search'];
+$search = $mysqli -> real_escape_string($search);
+
+$query = "SELECT name FROM `products` WHERE name LIKE '%".$search."%'";
+$result= $mysqli -> query($query);
+
+while($row = $result -> fetch_object()){
+    echo "<div id='link' onClick='addText(\"".$row -> name."\");'>" . $row -> name . "</div>";  
+}
+?>
+</form>
+
+<h9 class="text-center text-info display-3 fs-5"> Add Department </h9>
